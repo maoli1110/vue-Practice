@@ -1,11 +1,11 @@
-
+import App from '../App'
 import Hello from 'components/Hello'
+import Echart from 'components/Echart'
 
 export default [
     {
       path: '/', //顶层路由
-      name: 'Hello',
-      component: Hello,
+      component: App,
       children:[
       {
       	path:'',
@@ -17,7 +17,7 @@ export default [
       },
       {
       	path:'/rootSetting',
-      	component:Hello
+      	component:Echart
       },
       {
       	path:'/projectData',
