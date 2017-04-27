@@ -18,7 +18,10 @@
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
       <li><router-link to="/enterprise">/enterprise</router-link></li>
     </ul>
+        <transition name="router-slid">
+            <router-view></router-view>
+        </transition>
   </div>
-   <!-- <router-view></router-view> -->
+  
 </template>
 

@@ -1,6 +1,6 @@
 import App from '../App'
 import Hello from 'components/Hello'
-import Echart from 'components/Echart'
+import SideBar from 'components/sidebar'
 
 export default [
     {
@@ -9,23 +9,38 @@ export default [
       children:[
       {
       	path:'',
-      	redirect:'/enterprise'
+      	redirect:'/projectManage',
       },
       {
-      	path:'/enterprise',
+      	path:'/projectManage',
+      	component:Hello,
+            children:[
+            {
+                  path:'p1',
+                  component:SideBar
+            },{
+                  path:'p2',
+                  component:SideBar
+            },{
+                  path:'p3',
+                  component:SideBar
+            }]
+      },
+      {
+      	path:'/changeManage',
       	component:Hello
       },
       {
-      	path:'/rootSetting',
-      	component:Echart
-      },
-      {
-      	path:'/projectData',
+      	path:'/qualityEvaluation',
       	component:Hello
       },
       {
-      	path:'/component',
+      	path:'/measurePay',
       	component:Hello
+      },
+      {
+            path:'/statisAnalysis',
+            component:Hello
       },
       {
       	path:'/login',
